@@ -1,0 +1,60 @@
+/* ══ UTILITY CLASSES — Common patterns ══ */
+
+.headline-primary{
+  font-size:clamp(2rem, 5vw, 4.2rem);
+  font-weight:800;
+  letter-spacing:-0.04em;
+  line-height:1.06;
+  margin-bottom:1rem
+}
+
+.text-description{
+  font-size:clamp(0.9rem, 1.2vw, 1.05rem);
+  margin-bottom:2rem
+}
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  padding:14px 32px;
+  border-radius:9999px;
+  background:linear-gradient(to right, var(--color-accent-red), #e8613a);
+  color:white;
+  font-weight:600;
+  font-size:14px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  transition:all 0.2s duration;
+  cursor:pointer
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px)
+}
+
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  padding:14px 32px;
+  border-radius:9999px;
+  background:rgba(255,255,255,0.04);
+  color:white;
+  font-weight:500;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:all 0.2s duration;
+  cursor:pointer
+}
+
+.btn-secondary:hover{
+  border-color:rgba(196,51,46,0.3);
+  transform:translateY(-3px)
+}
+
+.device-mockup-wrapper{
+  width:100%;
+  max-width:780px;
+  margin-top:2rem;
+  padding:0 1rem
+}

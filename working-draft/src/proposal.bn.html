@@ -1,0 +1,70 @@
+---
+layout: base.njk
+eleventyNavigation:
+  key: Bengali Proposal
+permalink: /proposal.bn.html
+templateEngineOverride: njk,md
+---
+
+{% set hero = bn.hero %}
+{% set data = bn %}
+
+<!-- ════════════════════════════════════════════════════════════
+     POLY HERO + GSAP 3-PHASE SCROLL (combined, 600vh)
+     ════════════════════════════════════════════════════════════ -->
+<section class="relative h-[850vh]" id="heroSection">
+  <div class="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+
+    <!-- Table surface -->
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 70%, #2A1810 0%, #140B08 60%, #0A0806 100%)"></div>
+    <div class="absolute inset-0 z-[1] pointer-events-none opacity-[0.03]" style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%221%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div>
+
+    <!-- Orbs -->
+    <div class="glow-orb w-80 h-80 md:w-[600px] md:h-[600px] bg-red-700 top-1/4 left-1/4" id="orb1"></div>
+    <div class="glow-orb w-72 h-72 md:w-[500px] md:h-[500px] bg-amber-700 bottom-1/4 right-1/4" id="orb2"></div>
+
+    <!-- ═══════════════════════════════════════
+         POLY HERO — Initial view
+         ═══════════════════════════════════════ -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center" id="polyHero">
+      <div class="text-center px-4 max-w-[840px]">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(212,163,115,0.1)] border border-[rgba(212,163,115,0.15)] text-[11px] font-medium text-[#d4a373] tracking-[0.04em] mb-6">{{ hero.badge }}</div>
+        <h1 class="headline-primary" id="polyHeadline">
+          {{ hero.headline }}<br/>
+          <span class="text-[#ef4444]">{{ hero.headlineAccent }}</span>
+          <span class="inline-block relative">
+            {{ hero.headlineSuffix }}
+            <svg class="absolute bottom-[-8px] left-[-3%] w-[106%] h-[20px] overflow-visible" viewBox="0 0 240 20" preserveAspectRatio="none">
+              <path d="M2,14 C36,6 72,18 108,10 C144,4 180,16 216,8 C234,4 240,6 240,6" stroke="#ef4444" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-dasharray="500" stroke-dashoffset="0"/>
+            </svg>
+          </span>
+        </h1>
+        <p class="text-description text-[#b8a89a] max-w-[580px] mx-auto leading-[1.75]">{{ hero.description }}</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#overview" class="btn-primary">{{ hero.ctaPrimary }}</a>
+          <a href="#accept" class="btn-secondary">{{ hero.ctaSecondary }}</a>
+        </div>
+      </div>
+
+      <!-- Device mockup (placeholder) -->
+      <div class="device-mockup-wrapper" id="polyDevice">
+        <div class="relative bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] rounded-[14px] p-[14px_14px_0] shadow-[0_30px_80px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.06),0_0_50px_rgba(196,51,46,0.04)] border border-[rgba(255,255,255,0.05)]">
+          <div class="bg-[#120b08] rounded-[6px_6px_0_0] overflow-hidden p-4 min-h-[240px]">
+            <div class="flex gap-[6px] mb-3"><span class="w-[8px] h-[8px] rounded-full bg-[#FF5F56]"></span><span class="w-[8px] h-[8px] rounded-full bg-[#FFBD2E]"></span><span class="w-[8px] h-[8px] rounded-full bg-[#27C93F]"></span></div>
+            <div class="text-[11px] font-semibold text-[#ef4444]">ড্যাশবোর্ড প্রিভিউ</div>
+          </div>
+        </div>
+        <p class="text-center mt-3 text-[11px] text-[#8a7a6a] italic font-['Playfair_Display',Georgia,serif]">{{ hero.deviceCaption }}</p>
+      </div>
+
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/30 text-[10px] uppercase tracking-[0.15em]">
+        <span>স্ক্রোল করে দেখুন</span>
+        <div class="w-[18px] h-[28px] rounded-[9px] border-2 border-white/30 flex justify-center pt-[5px]"><div class="w-[2px] h-[5px] rounded-[2px] bg-white/30"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="text-center py-12 text-white/60">
+  🎉 <strong>টেমপ্লেট সিস্টেম সক্রিয়!</strong> কন্টেন্ট এখন ডেটা ফাইল দ্বারা চালিত। ফেজ ২ টেমপ্লেট স্ট্রাকচার তৈরি।
+</p>

@@ -1,0 +1,17 @@
+{
+  "name": "working-draft",
+  "version": "1.0.0",
+  "description": "This folder holds the live static HTML working draft for the Avanti proposal inside the proposal-ops structure.",
+  "main": "script.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "watch": "eleventy --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

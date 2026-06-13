@@ -1,0 +1,27 @@
+{
+  "lang": "en",
+  "langAttr": "en",
+  "title": "Avanti × Vibeflow — Growth Proposal",
+  "description": "90-day restaurant automation and growth proposal for Avanti Restaurant.",
+  "ogTitle": "Avanti × Vibeflow — Restaurant Automation & Sales Growth",
+  "ogDescription": "Discover how Vibeflow helps Avanti Restaurant automate operations, grow direct orders, and increase profitability in 90 days.",
+  "nav": {
+    "overview": "Overview",
+    "challenges": "Challenges",
+    "solution": "Solution",
+    "timeline": "Timeline",
+    "pricing": "Pricing",
+    "language": "বাংলা",
+    "accept": "Accept"
+  },
+  "hero": {
+    "badge": "✦ Avanti Restaurant × Vibeflow",
+    "headline": "Restaurant Automation &",
+    "headlineAccent": "Sales Growth",
+    "headlineSuffix": "Masterplan",
+    "description": "Vibeflow's 90-day proposal for Avanti Restaurant in Mymensingh — building a connected digital system that reduces leakage, grows direct orders, and turns every customer visit into a long-term relationship.",
+    "ctaPrimary": "Read Proposal ↓",
+    "ctaSecondary": "Accept & Sign",
+    "deviceCaption": "\"The Vibeflow dashboard — your restaurant's command center\""
+  }
+}

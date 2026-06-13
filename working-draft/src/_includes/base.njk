@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="{{ data.langAttr }}" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{{ data.title }}</title>
+<meta name="description" content="{{ data.description }}"/>
+<meta name="lang" content="{{ data.langAttr }}"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://avanti.vibeflow.io/{% if data.langAttr == 'en' %}index.html{% else %}proposal.bn.html{% endif %}"/>
+<meta property="og:title" content="{{ data.ogTitle }}"/>
+<meta property="og:description" content="{{ data.ogDescription }}"/>
+<meta property="og:image" content="https://avanti.vibeflow.io/assets/images/og-image.png"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://avanti.vibeflow.io/{% if data.langAttr == 'en' %}index.html{% else %}proposal.bn.html{% endif %}"/>
+<meta name="twitter:title" content="{{ data.ogTitle }}"/>
+<meta name="twitter:description" content="{{ data.ogDescription }}"/>
+<meta name="twitter:image" content="https://avanti.vibeflow.io/assets/images/og-image.png"/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://avanti.vibeflow.io/{% if data.langAttr == 'en' %}index.html{% else %}proposal.bn.html{% endif %}"/>
+
+<!-- Language Alternates -->
+<link rel="alternate" hreflang="en" href="https://avanti.vibeflow.io/index.html"/>
+<link rel="alternate" hreflang="bn" href="https://avanti.vibeflow.io/proposal.bn.html"/>
+<link rel="alternate" hreflang="x-default" href="https://avanti.vibeflow.io/index.html"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Avanti Restaurant × Vibeflow",
+  "image": "https://avanti.vibeflow.io/assets/images/og-image.png",
+  "description": "{{ data.description }}",
+  "url": "https://avanti.vibeflow.io/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mymensingh",
+    "addressCountry": "BD"
+  },
+  "sameAs": [
+    "https://facebook.com/vibeflow",
+    "https://twitter.com/vibeflow"
+  ]
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/400.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/600.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/700.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/800.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+:root{
+  --color-bg-dark: #140B08;
+  --color-text-light: #F5EDE4;
+  --color-accent-red: #ef4444;
+  --color-accent-orange: #f59e0b;
+  --color-accent-gold: #d4a373;
+  --color-accent-gold-hover: #fbbf24;
+  --color-accent-gold-dark: #d97706;
+  --color-white-glass-1: rgba(255, 255, 255, 0.03);
+  --color-white-glass-2: rgba(255, 255, 255, 0.06);
+  --color-white-glass-3: rgba(255, 255, 255, 0.08);
+  --color-white-glass-4: rgba(255, 255, 255, 0.12);
+  --color-white-text-55: rgba(255, 255, 255, 0.55);
+  --color-white-text-50: rgba(255, 255, 255, 0.50);
+  --color-red-glass: rgba(196, 51, 46, 0.1);
+  --color-red-glass-border: rgba(196, 51, 46, 0.3);
+}
+body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--color-text-light);overflow-x:hidden}
+.glass{background:var(--color-white-glass-1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--color-white-glass-3)}
+.glass-s{background:var(--color-white-glass-2);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:1px solid var(--color-white-glass-4)}
+.glow-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.2;z-index:-1;pointer-events:none}
+.t-grad{background:linear-gradient(135deg,#fff,#fca5a5,var(--color-accent-red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.t-gold{background:linear-gradient(135deg,#fff,var(--color-accent-gold-hover),var(--color-accent-gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.progress-bar{position:fixed;top:0;left:0;z-index:999;height:2px;background:linear-gradient(90deg,var(--color-accent-red),var(--color-accent-orange));width:0%;transition:width 80ms linear}
+/* ══ UTILITY CLASSES — Common patterns ══ */
+.headline-primary{font-size:clamp(2rem, 5vw, 4.2rem);font-weight:800;letter-spacing:-0.04em;line-height:1.06;margin-bottom:1rem}
+.text-description{font-size:clamp(0.9rem, 1.2vw, 1.05rem);margin-bottom:2rem}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:14px 32px;border-radius:9999px;background:linear-gradient(to right, var(--color-accent-red), #e8613a);color:white;font-weight:600;font-size:14px;box-shadow:0 4px 6px rgba(0,0,0,0.1);transition:all 0.2s duration;cursor:pointer}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;padding:14px 32px;border-radius:9999px;background:rgba(255,255,255,0.04);color:white;font-weight:500;font-size:14px;border:1px solid rgba(255,255,255,0.08);transition:all 0.2s duration;cursor:pointer}
+.btn-secondary:hover{border-color:rgba(196,51,46,0.3);transform:translateY(-3px)}
+.device-mockup-wrapper{width:100%;max-width:780px;margin-top:2rem;padding:0 1rem}
+/* RESPONSIVE PHASE CARDS — Business value cards */
+.phase-cards{width:100%;max-width:920px;margin:0 auto;padding:0 10px}
+.phase-dash{display:flex;flex-direction:column;gap:8px}
+.phase-dash-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+
+/* Hub card — primary value statement */
+.dash-hub{flex:1 1 200px;min-width:0;max-width:290px;padding:18px;border-radius:16px;position:relative}
+.dash-hub .hub-title{font-size:13px;font-weight:700;margin-bottom:4px;letter-spacing:-0.01em;line-height:1.3}
+.dash-hub .hub-desc{font-size:12px;color:var(--color-white-text-55);line-height:1.55}
+.dash-hub .hub-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<button id="themeBtn" onclick="toggleTheme()" class="fixed bottom-6 right-6 z-[1000] w-11 h-11 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg shadow-2xl shadow-red-500/20 flex items-center justify-center hover:scale-110 transition-transform duration-200">🌙</button>
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4" id="navbar">
+  <div class="max-w-6xl mx-auto glass-s rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/50">
+    <div class="text-lg font-bold t-grad tracking-tight flex items-center gap-2">
+      <div class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
+      vibeflow <span class="text-white/40 font-normal text-sm">× avanti</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-white/60">
+      <a href="#overview" class="hover:text-white transition-colors">{{ data.nav.overview }}</a>
+      <a href="#challenges" class="hover:text-white transition-colors">{{ data.nav.challenges }}</a>
+      <a href="#solution" class="hover:text-white transition-colors">{{ data.nav.solution }}</a>
+      <a href="#timeline" class="hover:text-white transition-colors">{{ data.nav.timeline }}</a>
+      <a href="#pricing" class="hover:text-white transition-colors">{{ data.nav.pricing }}</a>
+    </div>
+    <a href="proposal.{% if data.lang == 'en' %}bn{% else %}en{% endif %}.html" class="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-50 transition-colors">{{ data.nav.language }}</a>
+  </div>
+</nav>
+
+{{ content }}
+
+<script src="script.js"></script>
+</body>
+</html>
