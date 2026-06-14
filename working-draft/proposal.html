@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Avanti × Vibeflow — Growth Proposal</title>
 <meta name="description" content="90-day restaurant automation and growth proposal for Avanti Restaurant."/>
+<link rel="alternate" hreflang="en" href="proposal.html"/>
+<link rel="alternate" hreflang="bn" href="bangla.html"/>
+<link rel="alternate" hreflang="x-default" href="proposal.html"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/400.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/600.css" />
@@ -96,8 +99,25 @@ body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--
 .pricing-card.popular{transform:none}
 }
 </style>
+<style>
+/* ══ LANGUAGE TOGGLE ══ */
+.lang-toggle{position:fixed;top:24px;right:24px;z-index:1000;display:flex;gap:4px}
+.lang-toggle a{padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;text-decoration:none;transition:all 0.2s;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5)}
+.lang-toggle a.active{background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);color:#fff}
+.lang-toggle a:hover{background:rgba(255,255,255,0.08);color:#fff}
+@media(max-width:640px){.lang-toggle{top:16px;right:16px}.lang-toggle a{padding:4px 10px;font-size:11px}}
+
+</style>
+
 </head>
 <body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <a href="proposal.html" class="active">EN</a>
+  <a href="bangla.html">বাংলা</a>
+</div>
+
 
 <div class="progress-bar" id="progressBar"></div>
 <button id="themeBtn" onclick="toggleTheme()" class="fixed bottom-6 right-6 z-[1000] w-11 h-11 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg shadow-2xl shadow-red-500/20 flex items-center justify-center hover:scale-110 transition-transform duration-200">🌙</button>
@@ -112,7 +132,9 @@ body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--
     <div class="hidden md:flex items-center gap-6 text-sm font-medium text-white/60">
       <a href="#overview" class="hover:text-white transition-colors">Overview</a>
       <a href="#challenges" class="hover:text-white transition-colors">Challenges</a>
+      <a href="#secrets" class="hover:text-white transition-colors">Insights</a>
       <a href="#solution" class="hover:text-white transition-colors">Solution</a>
+      <a href="#workflows" class="hover:text-white transition-colors">Workflows</a>
       <a href="#timeline" class="hover:text-white transition-colors">Timeline</a>
       <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
     </div>
@@ -527,6 +549,49 @@ body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--
   </div>
 </section>
 
+
+<!-- Inside Secrets -->
+<section id="secrets" class="py-24 px-4 relative bg-gradient-to-b from-transparent via-red-900/5 to-transparent">
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-12">
+      <div class="text-sm text-white/40 uppercase tracking-wider mb-3">INSIDE THE PLAN</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 t-gold">What Most Restaurants Don't See.</h2>
+      <p class="text-white/50 text-lg max-w-2xl mx-auto">The quiet logic behind the proposal — things Mymensingh restaurant owners rarely hear from agencies.</p>
+    </div>
+    <div class="info-grid-2">
+      <div class="info-card glass border border-white/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 text-lg flex-shrink-0">💰</div>
+          <div><div class="font-semibold text-white text-sm">The Aggregator Trap</div></div>
+        </div>
+        <p>Most restaurants in Mymensingh lose 20–30% of every online order to aggregator commissions. This proposal fixes that by building your own ordering channel — so you keep every taka of margin.</p>
+      </div>
+      <div class="info-card glass border border-white/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">📋</div>
+          <div><div class="font-semibold text-white text-sm">Your Menu Is Your Best Salesperson</div></div>
+        </div>
+        <p>The menu is the most under-used marketing asset in any restaurant. We put it everywhere — website, Google, Maps, WhatsApp — so it works for you 24/7, even when you're sleeping.</p>
+      </div>
+      <div class="info-card glass border border-white/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg flex-shrink-0">🔄</div>
+          <div><div class="font-semibold text-white text-sm">A Returning Customer Is Worth 5× More</div></div>
+        </div>
+        <p>A customer who comes back 3 times is worth over 5× more than a first-timer. Our system is built to make that happen automatically — no chasing, no phone calls, no spreadsheets.</p>
+      </div>
+      <div class="info-card glass border border-white/10">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg flex-shrink-0">🖥️</div>
+          <div><div class="font-semibold text-white text-sm">No Tech Team Required</div></div>
+        </div>
+        <p>You don't need an IT person or a tech team to run this. Everything we build works from a single dashboard. Update your menu, view orders, track customers — all from your phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Solution -->
 <section id="solution" class="py-32 px-4 relative bg-[#0A0605]">
   <div class="max-w-6xl mx-auto">
@@ -557,10 +622,72 @@ body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--
   </div>
 </section>
 
+
+<!-- Workflows -->
+<section id="workflows" class="py-32 px-4 relative bg-[#0A0605]">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-sm text-white/40 uppercase tracking-wider mb-3">SYSTEMS & CHANNELS</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 t-grad">How Everything Connects.</h2>
+      <p class="text-white/60 text-lg max-w-2xl mx-auto">Six workflows that turn Avanti into a connected, automated restaurant.</p>
+    </div>
+    <div class="info-grid-3">
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-red-400">📱</div>
+        <div class="card-stat-sub">Automated SMS</div>
+        <h3>Customer SMS System</h3>
+        <p>Order confirmations, promo alerts, and birthday offers sent automatically. A customer orders once — the system keeps the conversation going.</p>
+        <div class="info-tags justify-center"><span>Order confirm</span><span>Promos</span><span>Birthday</span></div>
+      </div>
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-emerald-400">💬</div>
+        <div class="card-stat-sub">AI-Powered</div>
+        <h3>WhatsApp Ordering</h3>
+        <p>Customers browse your menu and order via WhatsApp. Vibeflow's AI inbox handles the conversation — no staff needed to reply.</p>
+        <div class="info-tags justify-center"><span>Menu browsing</span><span>AI inbox</span><span>Auto-reply</span></div>
+      </div>
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-amber-400">📲</div>
+        <div class="card-stat-sub">Social to Sale</div>
+        <h3>Social Media Pipeline</h3>
+        <p>Facebook and Instagram posts connect to your ordering funnel. A post about today's special turns into direct orders within minutes.</p>
+        <div class="info-tags justify-center"><span>Facebook</span><span>Instagram</span><span>Order link</span></div>
+      </div>
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-red-400">🗺️</div>
+        <div class="card-stat-sub">Local Discovery</div>
+        <h3>Google Maps & Local SEO</h3>
+        <p>Avanti appears when someone searches "best restaurant in Mymensingh." Full menu, ordering link, and directions — all on your Google listing.</p>
+        <div class="info-tags justify-center"><span>Search ranking</span><span>Maps listing</span><span>Menu online</span></div>
+      </div>
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-amber-400">🌐</div>
+        <div class="card-stat-sub">Your Own Platform</div>
+        <h3>Direct Order Website</h3>
+        <p>Your own domain where customers browse the menu, place orders, pay online, and leave feedback — end-to-end, commission-free.</p>
+        <div class="info-tags justify-center"><span>Browse</span><span>Order</span><span>Pay</span><span>Feedback</span></div>
+      </div>
+      <div class="info-card glass border border-white/10 text-center">
+        <div class="card-stat text-emerald-400">💌</div>
+        <div class="card-stat-sub">Auto Follow-up</div>
+        <h3>Customer Follow-up</h3>
+        <p>After every visit: thank you message → special offer → reorder reminder. All automatic. Customers feel remembered without you lifting a finger.</p>
+        <div class="info-tags justify-center"><span>Thank you</span><span>Offer</span><span>Reminder</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Timeline -->
 <section id="timeline" class="py-32 px-4 relative bg-gradient-to-b from-transparent via-amber-900/5 to-transparent">
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="text-center mb-16"><div class="text-sm text-white/40 uppercase tracking-wider mb-3">04 // ROLLOUT</div><h2 class="text-4xl md:text-5xl font-bold mb-4 t-grad">90-Day Implementation.</h2><p class="text-white/60 text-lg max-w-2xl mx-auto">Clear phases with measurable outcomes.</p></div>
+
+    <div class="mb-12 p-8 rounded-2xl glass-s border border-white/10 max-w-3xl mx-auto text-center">
+      <p class="text-white/75 text-base leading-relaxed"><span class="text-red-400 font-semibold">Days 1–20:</span> We get your website and full menu online so customers can find you. <span class="text-amber-400 font-semibold">Days 21–50:</span> We turn that into a live ordering system — customers place direct orders, you keep full margin. <span class="text-emerald-400 font-semibold">Days 51–90:</span> We activate loyalty programs and automations so customers come back without you having to chase them. <br/><span class="text-white/50 text-sm mt-4 block">By day 90, Avanti has a connected system running on its own.</span></p>
+    </div>
+
     <div class="info-grid-3">
       <div class="info-card glass border border-white/10 text-center">
         <div class="card-badge bg-red-500/10 text-red-400 border border-red-500/20">PHASE 1</div>
