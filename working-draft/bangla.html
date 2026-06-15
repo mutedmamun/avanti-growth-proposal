@@ -13,17 +13,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/600.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/700.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/800.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <style>
 :root{
-  --color-bg-dark: #140B08;
-  --color-text-light: #F5EDE4;
-  --color-accent-red: #ef4444;
-  --color-accent-orange: #f59e0b;
-  --color-accent-gold: #d4a373;
+  --color-bg-dark: #0A090B;
+  --color-surface-dark: #121013;
+  --color-text-light: #F6F1E8;
+  --color-text-muted: #D2C4B5;
+  --color-accent-red: #C4332E;
+  --color-accent-red-dark: #8E231F;
+  --color-accent-gold: #D7B25F;
   --color-accent-gold-hover: #fbbf24;
-  --color-accent-gold-dark: #d97706;
+  --color-accent-gold-dark: #9A6C3C;
   --color-white-glass-1: rgba(255, 255, 255, 0.03);
   --color-white-glass-2: rgba(255, 255, 255, 0.06);
   --color-white-glass-3: rgba(255, 255, 255, 0.08);
@@ -34,6 +37,7 @@
   --color-red-glass-border: rgba(196, 51, 46, 0.3);
 }
 body{font-family:'Inter',sans-serif;background:var(--color-bg-dark);color:var(--color-text-light);overflow-x:hidden}
+h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
 .glass{background:var(--color-white-glass-1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--color-white-glass-3)}
 .glass-s{background:var(--color-white-glass-2);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:1px solid var(--color-white-glass-4)}
 .glow-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.2;z-index:-1;pointer-events:none}
