@@ -111,10 +111,10 @@ h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
 <style>
 /* ══ LANGUAGE TOGGLE ══ */
 .lang-toggle{position:fixed;top:24px;right:24px;z-index:1000;display:flex;gap:4px}
-.lang-toggle a{padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;text-decoration:none;transition:all 0.2s;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5)}
-.lang-toggle a.active{background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);color:#fff}
-.lang-toggle a:hover{background:rgba(255,255,255,0.08);color:#fff}
-@media(max-width:640px){.lang-toggle{top:16px;right:16px}.lang-toggle a{padding:4px 10px;font-size:11px}}
+.lang-toggle a,.lang-toggle button{padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;text-decoration:none;transition:all 0.2s;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.5);cursor:pointer}
+.lang-toggle a.active,.lang-toggle button.active{background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);color:#fff}
+.lang-toggle a:hover,.lang-toggle button:hover{background:rgba(255,255,255,0.08);color:#fff}
+@media(max-width:640px){.lang-toggle{top:16px;right:16px}.lang-toggle a,.lang-toggle button{padding:4px 10px;font-size:11px}}
 
 </style>
 
@@ -123,8 +123,8 @@ h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
 
 <!-- Language Toggle -->
 <div class="lang-toggle" id="langToggle">
-  <a href="#" onclick="switchLang('en'); return false" id="toggle-en">EN</a>
-  <a href="#" onclick="switchLang('bn'); return false" class="active" id="toggle-bn">বাংলা</a>
+  <button type="button" onclick="switchLang('en')" id="toggle-en">EN</button>
+  <button type="button" onclick="switchLang('bn')" class="active" id="toggle-bn">বাংলা</button>
 </div>
 
 <div class="progress-bar" id="progressBar"></div>
