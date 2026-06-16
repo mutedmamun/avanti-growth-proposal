@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Avanti × Vibeflow — আলোচনা</title>
+<meta name="description" content="Avanti প্রস্তাবনা নিয়ে আলোচনা ও যোগাযোগ"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/400.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/600.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/700.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.8/800.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="lang-toggle">
+  <button type="button" onclick="switchLang('en')" id="toggle-en">EN</button>
+  <button type="button" onclick="switchLang('bn')" class="active" id="toggle-bn">বাংলা</button>
+</div>
+
+<button id="themeBtn" onclick="toggleTheme()">🌙</button>
+
+<div class="page-header">
+  <div class="secret-tag">🔷 সিক্রেট ব্লুপ্রিন্ট</div>
+  <div class="ph-label" data-lang="bn">আলোচনা ও পরবর্তী পদক্ষেপ</div>
+  <div class="ph-label" data-lang="en" style="display:none">DISCUSSION & NEXT STEPS</div>
+  <h1 class="t-grad" data-lang="bn">প্রশ্ন আছে? যোগাযোগ করুন।</h1>
+  <h1 class="t-grad" data-lang="en" style="display:none">Questions? Let's Talk.</h1>
+  <p data-lang="bn">উভয় পক্ষের জন্য উন্মুক্ত। সম্পূর্ণ স্বচ্ছতা। আমরা ৪৮ ঘন্টার মধ্যে যোগাযোগ করব।</p>
+  <p data-lang="en" style="display:none">Open for both parties. Full transparency. We'll respond within 48 hours.</p>
+</div>
+
+<!-- ═══ Q&A ═══ -->
+<section style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label" data-lang="bn">পাবলিক প্রশ্নোত্তর</div>
+    <div class="section-label" data-lang="en" style="display:none">PUBLIC Q&A</div>
+
+    <div class="space-y-4" id="qaFeed" style="max-width:600px;margin:20px auto 0;">
+
+      <div class="qa-card glass border border-white/5">
+        <div class="qa-author">
+          <span class="qa-badge" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;">Vibeflow</span>
+          Lukas <span data-lang="bn">· ২ দিন আগে</span><span data-lang="en" style="display:none"> · 2 days ago</span>
+        </div>
+        <p class="qa-text" data-lang="bn">"ওয়েবসাইট বানানোর আগে মেনু অডিট দিয়ে শুরু করব?"</p>
+        <p class="qa-text" data-lang="en" style="display:none">"Start with a menu audit before the website build?"</p>
+        <div class="qa-reply" style="border-color:var(--color-accent-red);">
+          <strong class="text-red-400">Avanti:</strong> <span data-lang="bn">হ্যাঁ, এটি অন্তর্ভুক্ত করুন।</span><span data-lang="en" style="display:none">Yes, include it.</span>
+        </div>
+      </div>
+
+      <div class="qa-card glass border border-white/5">
+        <div class="qa-author">
+          <span class="qa-badge" style="background:linear-gradient(135deg,var(--color-accent-red),#e8613a);color:#fff;">Avanti</span>
+          <span data-lang="bn">ম্যানেজমেন্ট · ১ দিন আগে</span><span data-lang="en" style="display:none">Management · 1 day ago</span>
+        </div>
+        <p class="qa-text" data-lang="bn">"অর্ডারিং কি আমাদের বর্তমান POS-এর সাথে কাজ করবে?"</p>
+        <p class="qa-text" data-lang="en" style="display:none">"Does ordering work with our current POS?"</p>
+        <div class="qa-reply" style="border-color:var(--color-accent-gold);">
+          <strong class="text-amber-400">Vibeflow:</strong> <span data-lang="bn">অ্যাডভান্সড গ্রোথ প্ল্যানে POS ইন্টিগ্রেশন অন্তর্ভুক্ত।</span>
+          <span data-lang="en" style="display:none">Advanced Growth plan includes POS integration.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ask a question form -->
+    <div class="form-box glass-s border border-white/10" style="margin-top:28px;">
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:4px;" data-lang="bn">প্রশ্ন করুন</h3>
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:4px;display:none;" data-lang="en">Ask a Question</h3>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);margin-bottom:16px;" data-lang="bn">উভয় পক্ষের জন্য দৃশ্যমান। সর্বদা স্বচ্ছ।</p>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);margin-bottom:16px;display:none;" data-lang="en">Visible to both parties. Always transparent.</p>
+
+      <form onsubmit="submitQ(event)">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label data-lang="bn">আপনার নাম</label>
+            <label data-lang="en" style="display:none">Your Name</label>
+            <input type="text" id="qName" required placeholder=""/>
+          </div>
+          <div>
+            <label data-lang="bn">পক্ষ</label>
+            <label data-lang="en" style="display:none">Party</label>
+            <select id="qParty">
+              <option value="Avanti" data-lang="bn">Avanti (ক্লায়েন্ট)</option>
+              <option value="Avanti" data-lang="en" style="display:none">Avanti (Client)</option>
+              <option value="Vibeflow" data-lang="bn">Vibeflow (পার্টনার)</option>
+              <option value="Vibeflow" data-lang="en" style="display:none">Vibeflow (Partner)</option>
+            </select>
+          </div>
+        </div>
+        <textarea id="qText" required style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#fff;font-size:14px;outline:none;min-height:80px;margin-bottom:14px;" placeholder="..." data-lang="bn"></textarea>
+        <button type="submit" class="form-btn" data-lang="bn">জমা দিন</button>
+        <button type="submit" class="form-btn" data-lang="en" style="display:none">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEAD CAPTURE ═══ -->
+<section class="bg-surface-glow-red" id="contact">
+  <div class="section-inner text-center">
+    <div class="secret-tag" style="margin-bottom:16px;">🔷 সিক্রেট ব্লুপ্রিন্ট</div>
+    <h2 class="section-title t-grad" data-lang="bn">শুরু করতে প্রস্তুত?</h2>
+    <h2 class="section-title t-grad" data-lang="en" style="display:none">Ready to Begin?</h2>
+    <p class="section-desc mx-auto" data-lang="bn">নিচে আপনার তথ্য দিন — আমরা ৪৮ ঘন্টার মধ্যে আপনার সাথে যোগাযোগ করব। আপনার ডেটা কোথাও সংরক্ষিত হবে না।</p>
+    <p class="section-desc mx-auto" data-lang="en" style="display:none">Share your info below — we'll contact you within 48 hours. Your data is never stored.</p>
+
+    <div class="form-box glass-s border border-white/10" style="margin-top:20px;text-align:left;">
+      <form onsubmit="submitLead(event)">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label data-lang="bn">আপনার নাম (প্রয়োজনীয়)</label>
+            <label data-lang="en" style="display:none">Your Name (required)</label>
+            <input type="text" id="lead-name" required/>
+          </div>
+          <div>
+            <label data-lang="bn">রেস্টুরেন্টের নাম</label>
+            <label data-lang="en" style="display:none">Restaurant Name</label>
+            <input type="text" id="lead-restaurant"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label data-lang="bn">ফোন / WhatsApp (প্রয়োজনীয়)</label>
+            <label data-lang="en" style="display:none">Phone / WhatsApp (required)</label>
+            <input type="tel" id="lead-phone" required/>
+          </div>
+          <div>
+            <label data-lang="bn">ইমেইল</label>
+            <label data-lang="en" style="display:none">Email</label>
+            <input type="email" id="lead-email"/>
+          </div>
+        </div>
+        <div>
+          <label data-lang="bn">আপনার বর্তমান যে প্ল্যাটফর্মে অর্ডার নেন (ঐচ্ছিক)</label>
+          <label data-lang="en" style="display:none">Current ordering platforms (optional)</label>
+          <input type="text" id="lead-platforms" placeholder="যেমন: Foodpanda, Pathao, নিজস্ব" data-lang="bn"/>
+        </div>
+        <button type="submit" class="form-btn" data-lang="bn">পাঠিয়ে দিন → আমরা ৪৮ ঘন্টার মধ্যে যোগাযোগ করব</button>
+        <button type="submit" class="form-btn" data-lang="en" style="display:none">Send → We'll Contact You Within 48 Hours</button>
+      </form>
+      <div id="lead-success" class="hidden" style="margin-top:16px;padding:16px;border-radius:12px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);text-align:center;">
+        <span style="color:var(--color-accent-emerald);font-weight:600;" data-lang="bn">✓ জমা দেওয়া হয়েছে — আমরা ৪৮ ঘন্টার মধ্যে যোগাযোগ করব।</span>
+        <span style="color:var(--color-accent-emerald);font-weight:600;display:none;" data-lang="en">✓ Submitted — We'll be in touch within 48 hours.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="section-inner" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <div style="font-weight:700;font-size:14px;background:linear-gradient(135deg,#fff,#fca5a5,var(--color-accent-red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+      <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--color-accent-red);margin-right:6px;vertical-align:middle;animation:pulse 2s infinite;"></span>
+      vibeflow × avanti
+    </div>
+    <p data-lang="bn">বাংলাদেশের রেস্টুরেন্ট মালিকদের জন্য তৈরি</p>
+    <p data-lang="en" style="display:none">Built for restaurant owners in Bangladesh</p>
+  </div>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="index.html">
+    <span class="nav-dot"></span>
+    <span style="font-weight:800;font-size:11px;">VFL</span><span>× avanti</span>
+  </a>
+  <a href="roadmap.html">
+    <span>🗺️</span>
+    <span data-lang="bn">রোডম্যাপ</span>
+    <span data-lang="en" style="display:none">Roadmap</span>
+  </a>
+  <a href="discussion.html" class="active">
+    <span>💬</span>
+    <span data-lang="bn">আলোচনা</span>
+    <span data-lang="en" style="display:none">Discuss</span>
+  </a>
+</nav>
+
+<script src="js/script.js"></script>
+<script>
+function submitQ(e) {
+  e.preventDefault();
+  var n = document.getElementById('qName').value.trim();
+  var p = document.getElementById('qParty').value;
+  var t = document.getElementById('qText').value.trim();
+  if (!n || !t) return alert('নাম এবং প্রশ্ন প্রয়োজন।');
+  var badge = p === 'Vibeflow'
+    ? 'background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;'
+    : 'background:linear-gradient(135deg,var(--color-accent-red),#e8613a);color:#fff;';
+  var el = document.createElement('div');
+  el.className = 'qa-card glass border border-white/5';
+  el.innerHTML = '<div class="qa-author"><span class="qa-badge" style="' + badge + '">' + p + '</span> ' + n + ' · আজ</div><p class="qa-text">"' + t + '"</p><div class="qa-reply" style="border-color:rgba(255,255,255,0.2);"><em style="color:rgba(255,255,255,0.3);">উত্তরের অপেক্ষায়।</em></div>';
+  document.getElementById('qaFeed').prepend(el);
+  document.getElementById('qText').value = '';
+}
+
+function submitLead(e) {
+  e.preventDefault();
+  var name = document.getElementById('lead-name').value.trim();
+  var phone = document.getElementById('lead-phone').value.trim();
+  if (!name || !phone) return alert('নাম এবং ফোন নম্বর প্রয়োজন।');
+  document.getElementById('lead-success').classList.remove('hidden');
+  // Scroll to success message
+  document.getElementById('lead-success').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
